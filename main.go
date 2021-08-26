@@ -21,8 +21,9 @@ func main() {
 	case options.OpDel:
 		dg.DeleteGuild(opts.GuildID)
 
-		fmt.Println("Guilds")
-		for _, guild := range dg.Guilds() {
+		guilds := dg.Guilds()
+		fmt.Println("Guilds: ", len(guilds))
+		for _, guild := range guilds {
 			fmt.Println("Guild ID: ", guild.ID)
 		}
 	case options.OpCreateOrManage:
