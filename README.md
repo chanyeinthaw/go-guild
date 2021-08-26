@@ -7,9 +7,22 @@ Create bot-owned discord servers.
 - discord developer account
 - bot access token
 
-# Building
+# Installation
 
-Run `go mod tidy` to build `go-guild`.
+### Building
+
+```
+go mod tidy
+go build .
+```
+
+`go-guild` binary will be built under source code directory.
+
+### Using pre-build binary for windows
+
+Download latest `go-guild.exe` from releases.
+
+[Releases](https://github.com/chanyeinthaw/go-guild/releases)
 
 # Usage
 
