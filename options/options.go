@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Options struct {
@@ -45,6 +46,8 @@ func Read() (*Options, error) {
 }
 
 func GetRandStr() string {
+	now := time.Now()
+	rand.Seed(now.UnixNano())
 	randPosFix := strings.ToUpper(strconv.FormatUint(rand.Uint64(), 16)[0:6])
 
 	return randPosFix
